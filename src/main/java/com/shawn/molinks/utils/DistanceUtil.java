@@ -50,7 +50,7 @@ public class DistanceUtil {
         s = s * EARTH_RADIUS;
         s = Math.round(s * 10000d) / 10000d;
         // 特别计算单位为米
-        s = s * 1000;
+//        s = s * 1000;
 
         //格式化，区小数后两位
         DecimalFormat df = new DecimalFormat("0.00");

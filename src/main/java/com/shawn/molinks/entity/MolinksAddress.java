@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * 魔灵坐标导入实体类
+ * excel导入实体类
  */
 public class MolinksAddress {
 
@@ -33,7 +33,7 @@ public class MolinksAddress {
     /**
      * 经销商名称
      */
-    @JsonProperty("name")
+//    @JsonProperty("name")
     @Excel(name="经销商名称", orderNum = "4", isImportField = "true")
     private String shopName;
     /**
@@ -63,21 +63,17 @@ public class MolinksAddress {
     /**
      * 百度经度
      */
-    @JsonProperty("lon")
+//    @JsonProperty("lon")
     @Excel(name="百度经度", orderNum = "9", isImportField = "true")
     private double bmapLon;
     /**
      * 百度纬度
      */
-    @JsonProperty("lat")
+//    @JsonProperty("lat")
     @Excel(name="百度纬度", orderNum = "10", isImportField = "true")
     private double bmapLat;
 
-    /**
-     * 实际距离
-     */
-    @JsonProperty("distance")
-    private String distance;
+
 
     public MolinksAddress() {
     }
@@ -170,13 +166,6 @@ public class MolinksAddress {
         this.bmapLat = bmapLat;
     }
 
-    public String getDistance() {
-        return distance;
-    }
-
-    public void setDistance(String distance) {
-        this.distance = distance;
-    }
 
     @Override
     public String toString() {
@@ -192,7 +181,6 @@ public class MolinksAddress {
                 ", gmapLat=" + gmapLat +
                 ", bmapLon=" + bmapLon +
                 ", bmapLat=" + bmapLat +
-                ", distance='" + distance + '\'' +
                 '}';
     }
 }
